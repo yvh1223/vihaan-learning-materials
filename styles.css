@@ -540,3 +540,14 @@ body {
         display: none;
     }
 }
+
+/* Future consideration for week groupings */
+.week-section {
+    margin-bottom: 30px;
+}
+.week-title {
+    font-size: 1.1em;
+    color: #4a5568;
+    margin-bottom: 15px;
+    text-align: center;
+}
