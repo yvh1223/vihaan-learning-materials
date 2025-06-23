@@ -45,17 +45,17 @@ body {
 /* Navigation Grid */
 .navigation-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
     margin-bottom: 40px;
 }
 
 .nav-card {
     background: rgba(255, 255, 255, 0.95);
-    border-radius: 20px;
-    padding: 30px;
+    border-radius: 15px;
+    padding: 20px;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -66,34 +66,34 @@ body {
 }
 
 .nav-icon {
-    font-size: 3em;
-    margin-bottom: 15px;
+    font-size: 2.2em;
+    margin-bottom: 10px;
 }
 
 .nav-card h3 {
     color: #4a5568;
-    margin-bottom: 10px;
-    font-size: 1.4em;
+    margin-bottom: 8px;
+    font-size: 1.2em;
 }
 
 .nav-card p {
     color: #718096;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
 .nav-details {
-    font-size: 0.9em;
+    font-size: 0.8em;
     color: #a0aec0;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .nav-button {
     background: linear-gradient(135deg, #667eea, #764ba2);
     color: white;
     border: none;
-    padding: 12px 25px;
-    border-radius: 25px;
-    font-size: 1em;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 0.9em;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
