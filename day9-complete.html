@@ -3,514 +3,486 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Day 9: Future Technology - Vihaan's Learning Journey</title>
+    <title>Day 10: Cultural Connections - Week 2 Finale</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html" class="nav-home">🏠 Home</a>
-            <a href="day8-complete.html" class="nav-prev">← Day 8</a>
-            <span class="nav-current">Day 9: Future Technology</span>
-            <a href="day10-complete.html" class="nav-next">Day 10 →</a>
-        </nav>
-    </header>
-
-    <main class="container">
-        <div class="day-header">
-            <h1>🤖 Day 9: Future Technology</h1>
-            <div class="day-info">
-                <span class="lexile-level">Lexile: 952L</span>
-                <span class="word-count">~1,450 words</span>
-                <span class="theme">Theme: Innovation & Technology</span>
+    <div class="container">
+        <a href="index.html" class="back-button">← Back to Main Menu</a>
+        
+        <div class="content-header">
+            <h1>🌍 Day 10: Cultural Connections Adventure</h1>
+            <p><strong>"The Festival of Many Voices"</strong></p>
+            <p>Full Story + STAAR Practice Questions + Writing Activity</p>
+            <p><em>Lexile Level: 955L | Reading Time: ~40 minutes | Questions: 18 total</em></p>
+            <div class="special-celebration">
+                <h2>🏆 WEEK 2 FINALE! 🏆</h2>
+                <p>Congratulations! You're completing your second week of advanced reading!</p>
             </div>
         </div>
-
-        <div class="progress-tracker">
-            <h2>📊 Today's Progress</h2>
-            <div class="progress-stats">
-                <div class="stat-item">
-                    <span class="stat-label">Reading Completed:</span>
-                    <span class="stat-value" id="reading-progress">0%</span>
+        
+        <div class="content-section">
+            <h2>🎯 Today's Learning Goals</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4>🌍 Reading Skills</h4>
+                    <p>✓ Read a complete 1,550+ word cultural diversity story</p>
+                    <p>✓ Practice understanding themes and character development</p>
+                    <p>✓ Analyze cause and effect in social situations</p>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-label">Questions Answered:</span>
-                    <span class="stat-value" id="questions-progress">0/17</span>
+                <div class="feature-card">
+                    <h4>📝 STAAR Practice</h4>
+                    <p>✓ Answer 18 multiple choice questions</p>
+                    <p>✓ Check answers immediately for feedback</p>
+                    <p>✓ Master advanced comprehension skills</p>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-label">Vocabulary Learned:</span>
-                    <span class="stat-value" id="vocab-progress">0/6</span>
+                <div class="feature-card">
+                    <h4>✍️ Writing Skills</h4>
+                    <p>✓ Write a persuasive essay about cultural festivals</p>
+                    <p>✓ Practice argumentative and persuasive writing</p>
+                    <p>✓ Use evidence to support your position</p>
                 </div>
             </div>
         </div>
-
-        <section class="vocabulary-preview">
-            <h2>🔤 Today's Vocabulary</h2>
+        
+        <div class="content-section">
+            <h2>🌈 Vocabulary Preview</h2>
+            <p>Before you start reading, here are some important words you'll encounter:</p>
             <div class="vocab-grid">
-                <div class="vocab-card" onclick="toggleVocab(this)">
-                    <div class="vocab-word">Innovation</div>
-                    <div class="vocab-definition">The process of creating new ideas, methods, or products that solve problems or improve existing solutions.</div>
+                <div class="vocab-card">
+                    <h4>heritage</h4>
+                    <p>The traditions, beliefs, and customs passed down from previous generations</p>
                 </div>
-                <div class="vocab-card" onclick="toggleVocab(this)">
-                    <div class="vocab-word">Algorithm</div>
-                    <div class="vocab-definition">A set of step-by-step instructions used to solve a problem or complete a task, especially in computer programming.</div>
+                <div class="vocab-card">
+                    <h4>diversity</h4>
+                    <p>The state of having people from different races, cultures, and backgrounds together</p>
                 </div>
-                <div class="vocab-card" onclick="toggleVocab(this)">
-                    <div class="vocab-word">Sustainable</div>
-                    <div class="vocab-definition">Able to be maintained over time without harming the environment or depleting natural resources.</div>
+                <div class="vocab-card">
+                    <h4>perspective</h4>
+                    <p>A particular way of viewing or understanding a situation</p>
                 </div>
-                <div class="vocab-card" onclick="toggleVocab(this)">
-                    <div class="vocab-word">Prototype</div>
-                    <div class="vocab-definition">An early model of a product built to test and improve ideas before creating the final version.</div>
+                <div class="vocab-card">
+                    <h4>appreciation</h4>
+                    <p>The recognition and understanding of the value or quality of something</p>
                 </div>
-                <div class="vocab-card" onclick="toggleVocab(this)">
-                    <div class="vocab-word">Collaboration</div>
-                    <div class="vocab-definition">Working together with others to achieve a common goal or complete a project.</div>
+                <div class="vocab-card">
+                    <h4>unity</h4>
+                    <p>The state of being joined together or working together for a common purpose</p>
                 </div>
-                <div class="vocab-card" onclick="toggleVocab(this)">
-                    <div class="vocab-word">Efficiency</div>
-                    <div class="vocab-definition">The ability to accomplish something with the least amount of wasted time, effort, or resources.</div>
-                </div>
-            </div>
-        </section>
-
-        <section class="reading-section">
-            <h2>📖 Today's Reading: "The Young Inventors of Tomorrow"</h2>
-            
-            <div class="story-content">
-                <p class="story-paragraph">
-                    Maya Chen adjusted her safety goggles and carefully examined the small robot she had been building for three months. The twelve-year-old inventor was preparing for the National Youth Technology Fair, where young people from across the country would showcase their <strong>innovations</strong> designed to solve real-world problems. Maya's creation wasn't just any ordinary robot—it was specifically designed to help elderly people who lived alone stay connected with their families and maintain their independence.
-                </p>
-
-                <div class="thinking-question">
-                    🤔 <strong>Think About It:</strong> What kind of problems do you think technology could help solve in your community?
-                </div>
-
-                <p class="story-paragraph">
-                    The idea for Maya's companion robot came from watching her grandmother struggle with loneliness after Maya's grandfather passed away. "Technology should make life better for everyone," Maya explained to her robotics club. "My robot uses artificial intelligence to learn daily routines and can remind people to take medicine, video call family members, and even play games or tell stories when someone feels lonely." The <strong>algorithm</strong> Maya programmed allowed the robot to recognize patterns and respond appropriately to different situations.
-                </p>
-
-                <p class="story-paragraph">
-                    Across the country in Austin, Texas, fourteen-year-old Marcus Williams was working on a completely different type of technology project. As someone who had grown up seeing the effects of climate change, Marcus was passionate about creating <strong>sustainable</strong> solutions for environmental problems. His invention was a smart garden system that used sensors to monitor soil moisture, sunlight, and plant health, automatically watering plants only when needed and sending alerts to users' phones about their garden's condition.
-                </p>
-
-                <div class="thinking-question">
-                    🤔 <strong>Think About It:</strong> How might smart technology help people grow their own food more successfully?
-                </div>
-
-                <p class="story-paragraph">
-                    "Food security is becoming a major issue," Marcus explained during a presentation to his environmental science class. "My system can help families grow their own vegetables using 40% less water than traditional gardening methods. The <strong>prototype</strong> I built for my backyard has already helped my family grow enough tomatoes, lettuce, and herbs to reduce our grocery bill by thirty dollars each month." Marcus's teacher was so impressed that she helped him apply for a grant to build larger systems for community gardens.
-                </p>
-
-                <p class="story-paragraph">
-                    Meanwhile, in Chicago, Illinois, sixteen-year-old Aisha Patel was developing an app that would revolutionize how students with learning differences accessed educational materials. Having dyslexia herself, Aisha understood the challenges that many students faced when trying to read traditional textbooks. Her app used voice recognition and text-to-speech technology to help students interact with their learning materials in multiple ways.
-                </p>
-
-                <p class="story-paragraph">
-                    "Everyone learns differently," Aisha said during beta testing of her app with local middle school students. "Some people learn better by listening, others by seeing, and some by doing. My app provides all three options." The <strong>collaboration</strong> between Aisha and the students helped her improve the app's features. Students could highlight text and have it read aloud, record voice notes that were automatically transcribed, and even draw diagrams that connected to relevant text sections.
-                </p>
-
-                <div class="thinking-question">
-                    🤔 <strong>Think About It:</strong> What features would you want in an app designed to help you learn better?
-                </div>
-
-                <p class="story-paragraph">
-                    The three young inventors didn't know each other, but they shared several important qualities that made them successful innovators. First, they all identified real problems that affected people they cared about. Second, they approached their projects with patience and persistence, understanding that good technology takes time to develop properly. Third, they prioritized <strong>efficiency</strong> in their designs, making sure their inventions would actually improve people's lives rather than create more complications.
-                </p>
-
-                <p class="story-paragraph">
-                    At the National Youth Technology Fair, Maya, Marcus, and Aisha finally met in person. They were amazed to discover how different their projects were, yet how similar their approaches had been. "We all started by noticing problems and thinking about solutions," Maya observed. "That's what real innovation is about—not just creating cool gadgets, but making technology that helps people."
-                </p>
-
-                <p class="story-paragraph">
-                    The three friends decided to stay in touch and support each other's work. They created an online group where young inventors could share ideas, ask for help, and celebrate successes. Within six months, their network had grown to include over 200 young people from 15 different countries, all working on technology projects designed to make the world a better place.
-                </p>
-
-                <div class="thinking-question">
-                    🤔 <strong>Think About It:</strong> If you could invent any piece of technology, what would it do and why?
-                </div>
-
-                <p class="story-paragraph">
-                    As Maya reflected on her experience at the technology fair, she realized that the most important lesson she had learned wasn't about programming or engineering—it was about the power of young people to create positive change. "Adults sometimes think kids can't solve big problems," she said. "But we see the world differently, and that gives us unique perspectives on solutions. The future of technology isn't just about making things faster or smaller—it's about making things better for everyone."
-                </p>
-
-                <p class="story-paragraph">
-                    Today, Maya's companion robot is being tested in senior living communities, Marcus's smart garden systems are installed in twelve schools across Texas, and Aisha's learning app is used by students in over 30 countries. Their success proves that age doesn't determine someone's ability to innovate and that the next generation of inventors is already working on solutions to tomorrow's challenges.
-                </p>
-            </div>
-        </section>
-
-        <section class="questions-section">
-            <h2>📝 Comprehension Questions</h2>
-            
-            <div class="question-block">
-                <div class="question">
-                    <h3>Question 1</h3>
-                    <p>What was the main inspiration for Maya's companion robot?</p>
-                    <div class="options">
-                        <label><input type="radio" name="q1" value="A"> A) A school science project</label>
-                        <label><input type="radio" name="q1" value="B"> B) Watching her grandmother's loneliness</label>
-                        <label><input type="radio" name="q1" value="C"> C) A robotics competition requirement</label>
-                        <label><input type="radio" name="q1" value="D"> D) Her interest in artificial intelligence</label>
-                    </div>
-                    <button onclick="checkAnswer('q1', 'B', 'Maya got the idea from watching her grandmother struggle with loneliness after her grandfather passed away.')">Check Answer</button>
-                    <div class="answer-feedback" id="q1-feedback"></div>
+                <div class="vocab-card">
+                    <h4>tradition</h4>
+                    <p>A custom or practice handed down from generation to generation</p>
                 </div>
             </div>
-
-            <div class="question-block">
-                <div class="question">
-                    <h3>Question 2</h3>
-                    <p>How much water does Marcus's smart garden system save compared to traditional gardening?</p>
-                    <div class="options">
-                        <label><input type="radio" name="q2" value="A"> A) 30%</label>
-                        <label><input type="radio" name="q2" value="B"> B) 40%</label>
-                        <label><input type="radio" name="q2" value="C"> C) 50%</label>
-                        <label><input type="radio" name="q2" value="D"> D) 60%</label>
-                    </div>
-                    <button onclick="checkAnswer('q2', 'B', 'The text states that Marcus\'s system helps families grow vegetables using 40% less water than traditional gardening methods.')">Check Answer</button>
-                    <div class="answer-feedback" id="q2-feedback"></div>
-                </div>
-            </div>
-
-            <div class="question-block">
-                <div class="question">
-                    <h3>Question 3</h3>
-                    <p>What personal experience motivated Aisha to create her learning app?</p>
-                    <div class="options">
-                        <label><input type="radio" name="q3" value="A"> A) She struggled with mathematics</label>
-                        <label><input type="radio" name="q3" value="B"> B) She had dyslexia</label>
-                        <label><input type="radio" name="q3" value="C"> C) She was a visual learner</label>
-                        <label><input type="radio" name="q3" value="D"> D) She wanted to help her friends</label>
-                    </div>
-                    <button onclick="checkAnswer('q3', 'B', 'The text clearly states that Aisha had dyslexia herself, which helped her understand the challenges students face with traditional textbooks.')">Check Answer</button>
-                    <div class="answer-feedback" id="q3-feedback"></div>
-                </div>
-            </div>
-
-            <div class="question-block">
-                <div class="question">
-                    <h3>Question 4</h3>
-                    <p>Based on the passage, what is the primary purpose of the National Youth Technology Fair?</p>
-                    <div class="options">
-                        <label><input type="radio" name="q4" value="A"> A) To award prizes to the best inventions</label>
-                        <label><input type="radio" name="q4" value="B"> B) To showcase young people's problem-solving innovations</label>
-                        <label><input type="radio" name="q4" value="C"> C) To teach students about technology</label>
-                        <label><input type="radio" name="q4" value="D"> D) To recruit students for technology companies</label>
-                    </div>
-                    <button onclick="checkAnswer('q4', 'B', 'The passage states that the National Youth Technology Fair is where young people showcase their innovations designed to solve real-world problems.')">Check Answer</button>
-                    <div class="answer-feedback" id="q4-feedback"></div>
-                </div>
-            </div>
-
-            <div class="question-block">
-                <div class="question">
-                    <h3>Question 5</h3>
-                    <p>What can readers infer about the three inventors' approach to problem-solving?</p>
-                    <div class="options">
-                        <label><input type="radio" name="q5" value="A"> A) They focused on creating the most advanced technology possible</label>
-                        <label><input type="radio" name="q5" value="B"> B) They prioritized making money from their inventions</label>
-                        <label><input type="radio" name="q5" value="C"> C) They identified personal connections to real problems</label>
-                        <label><input type="radio" name="q5" value="D"> D) They copied existing technologies</label>
-                    </div>
-                    <button onclick="checkAnswer('q5', 'C', 'The passage emphasizes that all three inventors identified real problems affecting people they cared about, showing personal connections drove their innovations.')">Check Answer</button>
-                    <div class="answer-feedback" id="q5-feedback"></div>
-                </div>
-            </div>
-
-            <div class="question-block">
-                <div class="question">
-                    <h3>Question 6</h3>
-                    <p>Which sentence from the passage best supports the idea that collaboration improved the inventors' work?</p>
-                    <div class="options">
-                        <label><input type="radio" name="q6" value="A"> A) "Maya adjusted her safety goggles and carefully examined the small robot."</label>
-                        <label><input type="radio" name="q6" value="B"> B) "The collaboration between Aisha and the students helped her improve the app's features."</label>
-                        <label><input type="radio" name="q6" value="C"> C) "Marcus was passionate about creating sustainable solutions."</label>
-                        <label><input type="radio" name="q6" value="D"> D) "The three friends decided to stay in touch."</label>
-                    </div>
-                    <button onclick="checkAnswer('q6', 'B', 'This sentence directly states that collaboration between Aisha and students helped improve her app\'s features, showing how working together enhanced the invention.')">Check Answer</button>
-                    <div class="answer-feedback" id="q6-feedback"></div>
-                </div>
-            </div>
-
-            <div class="question-block">
-                <div class="question">
-                    <h3>Question 7</h3>
-                    <p>What is the author's main purpose in writing this passage?</p>
-                    <div class="options">
-                        <label><input type="radio" name="q7" value="A"> A) To explain how specific technologies work</label>
-                        <label><input type="radio" name="q7" value="B"> B) To inspire young people to pursue technology careers</label>
-                        <label><input type="radio" name="q7" value="C"> C) To demonstrate how young inventors can solve real problems</label>
-                        <label><input type="radio" name="q7" value="D"> D) To compare different types of technology projects</label>
-                    </div>
-                    <button onclick="checkAnswer('q7', 'C', 'The passage focuses on showing how young people can identify problems and create technological solutions, demonstrating their problem-solving capabilities.')">Check Answer</button>
-                    <div class="answer-feedback" id="q7-feedback"></div>
-                </div>
-            </div>
-
-            <div class="question-block">
-                <div class="question">
-                    <h3>Question 8</h3>
-                    <p>Based on the context, what does "efficiency" mean in the passage?</p>
-                    <div class="options">
-                        <label><input type="radio" name="q8" value="A"> A) Working very quickly</label>
-                        <label><input type="radio" name="q8" value="B"> B) Using the most advanced technology</label>
-                        <label><input type="radio" name="q8" value="C"> C) Accomplishing goals with minimal waste</label>
-                        <label><input type="radio" name="q8" value="D"> D) Making the most money possible</label>
-                    </div>
-                    <button onclick="checkAnswer('q8', 'C', 'The passage emphasizes that the inventors prioritized efficiency in their designs, making sure inventions improved lives without creating complications, indicating minimal waste of resources.')">Check Answer</button>
-                    <div class="answer-feedback" id="q8-feedback"></div>
-                </div>
-            </div>
-
-            <div class="question-block">
-                <div class="question">
-                    <h3>Question 9</h3>
-                    <p>How did the three inventors' network grow after the technology fair?</p>
-                    <div class="options">
-                        <label><input type="radio" name="q9" value="A"> A) From 3 people to 50 people in one month</label>
-                        <label><input type="radio" name="q9" value="B"> B) From 3 people to 200 people from 15 countries in six months</label>
-                        <label><input type="radio" name="q9" value="C"> C) From 3 people to 100 people in three months</label>
-                        <label><input type="radio" name="q9" value="D"> D) From 3 people to 500 people in one year</label>
-                    </div>
-                    <button onclick="checkAnswer('q9', 'B', 'The passage states that within six months, their network had grown to include over 200 young people from 15 different countries.')">Check Answer</button>
-                    <div class="answer-feedback" id="q9-feedback"></div>
-                </div>
-            </div>
-
-            <div class="question-block">
-                <div class="question">
-                    <h3>Question 10</h3>
-                    <p>What theme is most prominent throughout this passage?</p>
-                    <div class="options">
-                        <label><input type="radio" name="q10" value="A"> A) Competition between young inventors</label>
-                        <label><input type="radio" name="q10" value="B"> B) The importance of expensive technology</label>
-                        <label><input type="radio" name="q10" value="C"> C) Young people creating positive change through innovation</label>
-                        <label><input type="radio" name="q10" value="D"> D) The difficulty of becoming a successful inventor</label>
-                    </div>
-                    <button onclick="checkAnswer('q10', 'C', 'The overall theme focuses on how young people can identify problems and create technological solutions that make positive changes in the world.')">Check Answer</button>
-                    <div class="answer-feedback" id="q10-feedback"></div>
-                </div>
-            </div>
-
-            <div class="question-block">
-                <div class="question">
-                    <h3>Question 11</h3>
-                    <p>Which statement best describes Maya's robot's capabilities?</p>
-                    <div class="options">
-                        <label><input type="radio" name="q11" value="A"> A) It only reminds people to take medicine</label>
-                        <label><input type="radio" name="q11" value="B"> B) It learns routines and provides multiple types of companionship</label>
-                        <label><input type="radio" name="q11" value="C"> C) It replaces the need for human interaction</label>
-                        <label><input type="radio" name="q11" value="D"> D) It only works for elderly people</label>
-                    </div>
-                    <button onclick="checkAnswer('q11', 'B', 'The passage describes Maya\'s robot as using AI to learn daily routines and providing various services like medicine reminders, video calls, games, and stories.')">Check Answer</button>
-                    <div class="answer-feedback" id="q11-feedback"></div>
-                </div>
-            </div>
-
-            <div class="question-block">
-                <div class="question">
-                    <h3>Question 12</h3>
-                    <p>What evidence supports that Marcus's garden system is effective?</p>
-                    <div class="options">
-                        <label><input type="radio" name="q12" value="A"> A) It won first place at the technology fair</label>
-                        <label><input type="radio" name="q12" value="B"> B) It helped his family reduce their grocery bill by $30 monthly</label>
-                        <label><input type="radio" name="q12" value="C"> C) It was featured in a technology magazine</label>
-                        <label><input type="radio" name="q12" value="D"> D) It attracted investors for mass production</label>
-                    </div>
-                    <button onclick="checkAnswer('q12', 'B', 'The passage provides concrete evidence that Marcus\'s prototype helped his family reduce their grocery bill by thirty dollars each month.')">Check Answer</button>
-                    <div class="answer-feedback" id="q12-feedback"></div>
-                </div>
-            </div>
-
-            <div class="question-block">
-                <div class="question">
-                    <h3>Question 13</h3>
-                    <p>How does Aisha's app accommodate different learning styles?</p>
-                    <div class="options">
-                        <label><input type="radio" name="q13" value="A"> A) It only provides audio options</label>
-                        <label><input type="radio" name="q13" value="B"> B) It offers visual, auditory, and kinesthetic learning options</label>
-                        <label><input type="radio" name="q13" value="C"> C) It focuses solely on students with dyslexia</label>
-                        <label><input type="radio" name="q13" value="D"> D) It replaces traditional textbooks entirely</label>
-                    </div>
-                    <button onclick="checkAnswer('q13', 'B', 'The passage explains that Aisha\'s app provides three learning options: listening (auditory), seeing (visual), and doing (kinesthetic), accommodating different learning styles.')">Check Answer</button>
-                    <div class="answer-feedback" id="q13-feedback"></div>
-                </div>
-            </div>
-
-            <div class="question-block">
-                <div class="question">
-                    <h3>Question 14</h3>
-                    <p>What can be inferred about the inventors' attitudes toward technology?</p>
-                    <div class="options">
-                        <label><input type="radio" name="q14" value="A"> A) Technology should be as complex as possible</label>
-                        <label><input type="radio" name="q14" value="B"> B) Technology should primarily focus on entertainment</label>
-                        <label><input type="radio" name="q14" value="C"> C) Technology should solve real problems and help people</label>
-                        <label><input type="radio" name="q14" value="D"> D) Technology should only be developed by adults</label>
-                    </div>
-                    <button onclick="checkAnswer('q14', 'C', 'Throughout the passage, all three inventors focus on creating technology that solves real problems and helps people, as shown in Maya\'s quote about technology making life better for everyone.')">Check Answer</button>
-                    <div class="answer-feedback" id="q14-feedback"></div>
-                </div>
-            </div>
-
-            <div class="question-block">
-                <div class="question">
-                    <h3>Question 15</h3>
-                    <p>Which detail best shows the global impact of these young inventors?</p>
-                    <div class="options">
-                        <label><input type="radio" name="q15" value="A"> A) Maya's robot is being tested in senior living communities</label>
-                        <label><input type="radio" name="q15" value="B"> B) Marcus's systems are in twelve Texas schools</label>
-                        <label><input type="radio" name="q15" value="C"> C) Aisha's app is used by students in over 30 countries</label>
-                        <label><input type="radio" name="q15" value="D"> D) They created an online network of inventors</label>
-                    </div>
-                    <button onclick="checkAnswer('q15', 'C', 'Aisha\'s app being used by students in over 30 countries demonstrates the most significant global reach and impact among the examples provided.')">Check Answer</button>
-                    <div class="answer-feedback" id="q15-feedback"></div>
-                </div>
-            </div>
-
-            <div class="question-block">
-                <div class="question">
-                    <h3>Question 16</h3>
-                    <p>What message does Maya convey about young people's ability to innovate?</p>
-                    <div class="options">
-                        <label><input type="radio" name="q16" value="A"> A) Young people need adult supervision to create anything meaningful</label>
-                        <label><input type="radio" name="q16" value="B"> B) Young people see the world differently and have unique solution perspectives</label>
-                        <label><input type="radio" name="q16" value="C"> C) Young people should focus on schoolwork instead of inventing</label>
-                        <label><input type="radio" name="q16" value="D"> D) Young people can only solve simple problems</label>
-                    </div>
-                    <button onclick="checkAnswer('q16', 'B', 'Maya states that young people see the world differently, giving them unique perspectives on solutions, and challenges the idea that kids can\'t solve big problems.')">Check Answer</button>
-                    <div class="answer-feedback" id="q16-feedback"></div>
-                </div>
-            </div>
-
-            <div class="question-block">
-                <div class="question">
-                    <h3>Question 17</h3>
-                    <p>Based on the passage, what quality is most important for successful innovation?</p>
-                    <div class="options">
-                        <label><input type="radio" name="q17" value="A"> A) Having access to expensive equipment</label>
-                        <label><input type="radio" name="q17" value="B"> B) Identifying real problems that affect people you care about</label>
-                        <label><input type="radio" name="q17" value="C"> C) Being older and more experienced</label>
-                        <label><input type="radio" name="q17" value="D"> D) Competing against other inventors</label>
-                    </div>
-                    <button onclick="checkAnswer('q17', 'B', 'The passage emphasizes that the most important shared quality of the successful inventors was that they all identified real problems affecting people they cared about.')">Check Answer</button>
-                    <div class="answer-feedback" id="q17-feedback"></div>
-                </div>
-            </div>
-        </section>
-
-        <section class="writing-section">
-            <h2>✍️ Writing Challenge: Informational Writing</h2>
-            <div class="writing-prompt">
-                <h3>Your Task:</h3>
-                <p>Write an informational essay (300-400 words) explaining how technology can solve a problem in your school or community. Choose a specific problem, describe it clearly, and explain your technological solution.</p>
-                
-                <h4>Writing Guidelines:</h4>
-                <ul>
-                    <li>Include a clear introduction with your main idea</li>
-                    <li>Describe the problem with specific details</li>
-                    <li>Explain your technology solution step by step</li>
-                    <li>Include at least 3 vocabulary words from today's lesson</li>
-                    <li>End with a conclusion about the impact of your solution</li>
-                </ul>
-                
-                <div class="writing-area">
-                    <textarea id="writing-response" placeholder="Begin writing your informational essay here..." rows="15"></textarea>
-                    <div class="word-count">Word count: <span id="word-count">0</span></div>
-                    <button onclick="saveWriting()">💾 Save My Writing</button>
-                </div>
-            </div>
-        </section>
-
-        <div class="day-completion">
-            <h2>🎉 Great Work Today!</h2>
-            <p>You've completed Day 9: Future Technology. You're building strong skills and moving closer to Masters Level performance!</p>
-            <div class="completion-stats">
-                <div class="stat">📖 Read 1,450+ words</div>
-                <div class="stat">❓ Practiced 17 comprehension questions</div>
-                <div class="stat">📝 Completed informational writing</div>
-                <div class="stat">🔤 Learned 6 new vocabulary words</div>
-            </div>
-            <a href="day10-complete.html" class="next-day-btn">Continue to Day 10: Cultural Connections →</a>
         </div>
-    </main>
-
-    <footer>
-        <p>Keep up the excellent work, Vihaan! Every day brings you closer to reading mastery! 🌟</p>
-    </footer>
-
-    <script>
-        let questionsAnswered = 0;
-        let vocabularyLearned = 0;
-        const totalQuestions = 17;
-        const totalVocabulary = 6;
-
-        function toggleVocab(card) {
-            card.classList.toggle('flipped');
-            if (card.classList.contains('flipped') && !card.classList.contains('counted')) {
-                vocabularyLearned++;
-                card.classList.add('counted');
-                updateProgress();
-            }
-        }
-
-        function checkAnswer(questionId, correctAnswer, explanation) {
-            const selectedAnswer = document.querySelector(`input[name="${questionId}"]:checked`);
-            const feedback = document.getElementById(`${questionId}-feedback`);
+        
+        <div class="content-section">
+            <h2>📖 "The Festival of Many Voices"</h2>
             
-            if (!selectedAnswer) {
-                feedback.innerHTML = '<div class="feedback incorrect">Please select an answer first.</div>';
-                return;
-            }
-
-            const isCorrect = selectedAnswer.value === correctAnswer;
+            <div class="chapter">
+                <h3>Chapter 1: Preparing for the Festival</h3>
+                
+                <p>Elena Martinez nervously adjusted the colorful flowers in her hair as she stood behind the booth representing her family's Mexican heritage. The International Culture Festival at Roosevelt Middle School was about to begin, and students from over twenty different countries were preparing to share their traditions with the entire school community. Elena had been worried that other students might not understand or appreciate her culture, but her grandmother's words echoed in her mind: "Mija, when you share your heart with others, you build bridges of understanding."</p>
+                
+                <p>Across the gymnasium, Dmitri Petrov was arranging traditional Russian nesting dolls on his family's display table. Each wooden doll told a story about his grandmother's journey from a small village in Siberia to America forty years ago. "These dolls represent the layers of our family history," Dmitri explained to his curious classmate Jake. "Each one holds memories and stories that connect me to my ancestors." The diversity of displays throughout the gym was remarkable—Indian rangoli patterns made from colored sand, Japanese origami cranes hanging from the ceiling, and the aroma of various international foods filling the air.</p>
+                
+                <p>Meanwhile, Fatima Al-Rashid was teaching a small group of students how to write their names in Arabic calligraphy. "Writing in Arabic flows like a river," she said, guiding her friend Sarah's hand as she formed the elegant curves and lines. "Each letter connects to the next, just like how people in my culture believe we're all connected to each other." Sarah was amazed at how different this perspective was from her own experience with English writing, where letters stood separately from each other.</p>
+            </div>
             
-            if (isCorrect) {
-                feedback.innerHTML = `<div class="feedback correct">✅ Correct! ${explanation}</div>`;
-                if (!selectedAnswer.closest('.question-block').classList.contains('answered')) {
-                    questionsAnswered++;
-                    selectedAnswer.closest('.question-block').classList.add('answered');
-                    updateProgress();
-                }
-            } else {
-                feedback.innerHTML = `<div class="feedback incorrect">❌ Not quite. ${explanation}</div>`;
-            }
-        }
-
-        function updateProgress() {
-            document.getElementById('questions-progress').textContent = `${questionsAnswered}/${totalQuestions}`;
-            document.getElementById('vocab-progress').textContent = `${vocabularyLearned}/${totalVocabulary}`;
+            <div class="thinking-break">
+                <h4>🤔 Stop and Think</h4>
+                <p><strong>Culture Detective Question:</strong> How do you think sharing cultural traditions helps people understand each other better? What would you want to share about your own culture or family?</p>
+            </div>
             
-            const readingProgress = Math.min(100, (questionsAnswered / totalQuestions) * 100);
-            document.getElementById('reading-progress').textContent = `${Math.round(readingProgress)}%`;
-        }
-
-        function saveWriting() {
-            const writingText = document.getElementById('writing-response').value;
-            if (writingText.trim().length > 50) {
-                alert('✅ Your writing has been saved! Great work on your informational essay.');
-            } else {
-                alert('Please write at least 50 words before saving.');
-            }
-        }
-
-        // Word count functionality
-        document.getElementById('writing-response').addEventListener('input', function() {
-            const words = this.value.trim().split(/\s+/).filter(word => word.length > 0);
-            document.getElementById('word-count').textContent = words.length;
-        });
-
-        // Mark reading as completed when user scrolls through the story
-        let hasScrolledToEnd = false;
-        window.addEventListener('scroll', function() {
-            const scrollPosition = window.scrollY + window.innerHeight;
-            const documentHeight = document.documentElement.scrollHeight;
+            <div class="question-box">
+                <h3>📝 Chapter 1 STAAR Practice Questions</h3>
+                <p><strong>Instructions:</strong> Answer each question, then click "Show Answers" to check your work!</p>
+                
+                <div class="question-item">
+                    <p><strong>1.</strong> What was Elena's main concern before the International Culture Festival began?</p>
+                    <p>A) She didn't have enough materials for her booth</p>
+                    <p>B) She worried that other students wouldn't understand or appreciate her culture</p>
+                    <p>C) She was afraid she would forget what to say</p>
+                    <p>D) She was nervous about performing in front of people</p>
+                </div>
+                
+                <div class="question-item">
+                    <p><strong>2.</strong> According to the passage, what did Dmitri's Russian nesting dolls represent?</p>
+                    <p>A) Traditional Russian artwork</p>
+                    <p>B) Expensive family heirlooms</p>
+                    <p>C) The layers of his family history</p>
+                    <p>D) Popular Russian toys</p>
+                </div>
+                
+                <div class="question-item">
+                    <p><strong>3.</strong> How did Fatima compare Arabic writing to her cultural beliefs?</p>
+                    <p>A) Arabic writing is more beautiful than English</p>
+                    <p>B) Arabic flows like a river, with connected letters representing how people are connected</p>
+                    <p>C) Arabic writing is easier to learn than English</p>
+                    <p>D) Arabic writing represents the history of her country</p>
+                </div>
+                
+                <button class="collapsible">📋 Show Chapter 1 Answers</button>
+                <div class="collapsible-content">
+                    <h4>✅ Chapter 1 Answer Key:</h4>
+                    
+                    <p><strong>1. B - She worried that other students wouldn't understand or appreciate her culture</strong></p>
+                    <p><em>Explanation:</em> The passage states Elena "had been worried that other students might not understand or appreciate her culture."</p>
+                    
+                    <p><strong>2. C - The layers of his family history</strong></p>
+                    <p><em>Explanation:</em> Dmitri explained that the dolls "represent the layers of our family history" and "Each one holds memories and stories that connect me to my ancestors."</p>
+                    
+                    <p><strong>3. B - Arabic flows like a river, with connected letters representing how people are connected</strong></p>
+                    <p><em>Explanation:</em> Fatima explained that Arabic writing "flows like a river" with connected letters, "just like how people in my culture believe we're all connected to each other."</p>
+                    
+                    <div class="self-check">
+                        <strong>💡 Self-Check:</strong> How many did you get right? 3/3 = Excellent! 2/3 = Good job! 1/3 = Keep practicing!
+                    </div>
+                </div>
+            </div>
             
-            if (scrollPosition >= documentHeight - 100 && !hasScrolledToEnd) {
-                hasScrolledToEnd = true;
-                document.getElementById('reading-progress').textContent = '100%';
-            }
-        });
-    </script>
-</body>
-</html>
+            <div class="chapter">
+                <h3>Chapter 2: The Festival Begins</h3>
+                
+                <p>As the festival officially opened, Principal Johnson welcomed the crowd of students, families, and community members. "Today, we celebrate what makes our school special—the rich tapestry of cultures that our students bring from around the world," she announced. "When we learn about each other's backgrounds, we develop greater appreciation for the experiences that shape us all." The principal's words seemed to energize everyone present, as people began moving from booth to booth with genuine curiosity and enthusiasm.</p>
+                
+                <p>At the Korean booth, Min-jun Kim was demonstrating the ancient art of taekwondo while his mother served traditional kimchi to brave volunteers. "Taekwondo teaches us discipline, respect, and perseverance," Min-jun explained as he performed a series of precise kicks and blocks. "These values help me in school, in sports, and in life." Several students asked if they could learn some basic moves, and soon Min-jun had organized an impromptu lesson that drew a crowd of eager participants.</p>
+                
+                <p>The Nigerian booth featured Chioma Okafor sharing stories through traditional Igbo music and dance. As she played rhythmic beats on a talking drum, she explained, "In my culture, music isn't just entertainment—it's how we pass down history, celebrate important events, and bring communities together." Her infectious energy soon had people clapping along and trying to learn the basic steps of a traditional dance. The joy and laughter transcended language barriers, creating moments of genuine unity among students who had never spoken to each other before.</p>
+            </div>
+            
+            <div class="thinking-break">
+                <h4>🤔 Stop and Think</h4>
+                <p><strong>Culture Detective Question:</strong> How can music and dance help people connect across cultural differences? What activities bring people together in your community?</p>
+            </div>
+            
+            <div class="question-box">
+                <h3>📝 Chapter 2 STAAR Practice Questions</h3>
+                
+                <div class="question-item">
+                    <p><strong>4.</strong> What values did Min-jun say taekwondo teaches?</p>
+                    <p>A) Strength, speed, and flexibility</p>
+                    <p>B) Competition, winning, and achievement</p>
+                    <p>C) Discipline, respect, and perseverance</p>
+                    <p>D) Balance, coordination, and focus</p>
+                </div>
+                
+                <div class="question-item">
+                    <p><strong>5.</strong> According to Chioma, what role does music play in Igbo culture?</p>
+                    <p>A) It's mainly for entertainment purposes</p>
+                    <p>B) It's used to pass down history, celebrate events, and bring communities together</p>
+                    <p>C) It's performed only during religious ceremonies</p>
+                    <p>D) It's a way to earn money for families</p>
+                </div>
+                
+                <div class="question-item">
+                    <p><strong>6.</strong> What effect did Principal Johnson's opening speech have on the crowd?</p>
+                    <p>A) People became nervous about participating</p>
+                    <p>B) The speech energized everyone and they began exploring booths with curiosity</p>
+                    <p>C) Students decided to leave early</p>
+                    <p>D) Parents complained about the festival</p>
+                </div>
+                
+                <button class="collapsible">📋 Show Chapter 2 Answers</button>
+                <div class="collapsible-content">
+                    <h4>✅ Chapter 2 Answer Key:</h4>
+                    
+                    <p><strong>4. C - Discipline, respect, and perseverance</strong></p>
+                    <p><em>Explanation:</em> Min-jun explained that "Taekwondo teaches us discipline, respect, and perseverance" and that "These values help me in school, in sports, and in life."</p>
+                    
+                    <p><strong>5. B - It's used to pass down history, celebrate events, and bring communities together</strong></p>
+                    <p><em>Explanation:</em> Chioma explained that in her culture, "music isn't just entertainment—it's how we pass down history, celebrate important events, and bring communities together."</p>
+                    
+                    <p><strong>6. B - The speech energized everyone and they began exploring booths with curiosity</strong></p>
+                    <p><em>Explanation:</em> The text states "The principal's words seemed to energize everyone present, as people began moving from booth to booth with genuine curiosity and enthusiasm."</p>
+                </div>
+            </div>
+            
+            <div class="chapter">
+                <h3>Chapter 3: Food Brings People Together</h3>
+                
+                <p>One of the most popular stops was the Italian booth, where Marco Rossi and his nonna (grandmother) were teaching students how to make fresh pasta. "Food is love made visible," his grandmother said in her accented English as she guided students' hands in rolling and cutting the dough. "When we share our food, we share our hearts." The simple act of cooking together broke down barriers as students laughed at their misshapen pasta attempts and celebrated their small successes together.</p>
+                
+                <p>As the afternoon progressed, something remarkable began to happen. Students who had initially felt shy about sharing their cultures became more confident as they saw the genuine interest and respect from their classmates. Elena noticed that students were asking thoughtful questions about Mexican traditions like Día de los Muertos, wanting to understand the meaning behind the celebration rather than just looking at the colorful decorations.</p>
+                
+                <p>The festival's highlight came when Mrs. Chen, the music teacher, invited students to perform a collaborative piece that blended instruments and musical styles from different cultures. Elena played traditional Mexican maracas, Dmitri contributed with a Russian balalaika, Fatima sang a beautiful Arabic melody, Min-jun added Korean percussion, Chioma brought her talking drum, and Marco played an Italian mandolin. Together, they created something entirely new—a musical representation of their school's multicultural community.</p>
+            </div>
+            
+            <div class="thinking-break">
+                <h4>🤔 Stop and Think</h4>
+                <p><strong>Culture Detective Question:</strong> What do you think this collaborative music performance represents about working together despite differences? How does food help bring people together?</p>
+            </div>
+            
+            <div class="question-box">
+                <h3>📝 Chapter 3 STAAR Practice Questions</h3>
+                
+                <div class="question-item">
+                    <p><strong>7.</strong> What did Marco's grandmother mean when she said "Food is love made visible"?</p>
+                    <p>A) Food should look beautiful when served</p>
+                    <p>B) Cooking food takes a lot of effort and time</p>
+                    <p>C) Sharing food is a way of sharing your heart and showing care</p>
+                    <p>D) Food represents the wealth of a family</p>
+                </div>
+                
+                <div class="question-item">
+                    <p><strong>8.</strong> What was significant about the collaborative musical performance?</p>
+                    <p>A) It showed which culture had the best music</p>
+                    <p>B) It created something new that represented their multicultural community</p>
+                    <p>C) It proved that some instruments work better together</p>
+                    <p>D) It entertained the audience with traditional songs</p>
+                </div>
+                
+                <div class="question-item">
+                    <p><strong>9.</strong> How did students' confidence change during the festival?</p>
+                    <p>A) Students became more shy as the day went on</p>
+                    <p>B) Students who were initially shy became more confident seeing genuine interest from classmates</p>
+                    <p>C) Only some students gained confidence while others lost it</p>
+                    <p>D) Students' confidence levels stayed the same throughout</p>
+                </div>
+                
+                <button class="collapsible">📋 Show Chapter 3 Answers</button>
+                <div class="collapsible-content">
+                    <h4>✅ Chapter 3 Answer Key:</h4>
+                    
+                    <p><strong>7. C - Sharing food is a way of sharing your heart and showing care</strong></p>
+                    <p><em>Explanation:</em> The grandmother explained that "When we share our food, we share our hearts," meaning that sharing food is a way of showing care and love.</p>
+                    
+                    <p><strong>8. B - It created something new that represented their multicultural community</strong></p>
+                    <p><em>Explanation:</em> The text states they "created something entirely new—a musical representation of their school's multicultural community" by blending different cultural instruments and styles.</p>
+                    
+                    <p><strong>9. B - Students who were initially shy became more confident seeing genuine interest from classmates</strong></p>
+                    <p><em>Explanation:</em> The passage states "Students who had initially felt shy about sharing their cultures became more confident as they saw the genuine interest and respect from their classmates."</p>
+                </div>
+            </div>
+            
+            <div class="chapter">
+                <h3>Chapter 4: Building Bridges</h3>
+                
+                <p>As the festival drew to a close, Principal Johnson invited everyone to participate in a friendship circle. Students linked arms regardless of their cultural backgrounds, and together they shared what they had learned. "I realized that even though we come from different places, we all have similar hopes and dreams," said Sarah, who had spent the day learning Arabic calligraphy. "We all want to be understood, to have friends, and to feel like we belong somewhere."</p>
+                
+                <p>Dmitri nodded in agreement. "My grandmother always told me that America is beautiful because it's like a garden where different flowers grow together. Today I saw what she meant. We don't all have to be the same flower to create something beautiful together." His words resonated with students and adults alike, many of whom were reflecting on their own assumptions and prejudices that had been challenged throughout the day.</p>
+                
+                <p>Elena felt tears of happiness in her eyes as she looked around the circle. The nervousness she had felt that morning seemed like a distant memory. "I was worried that people wouldn't understand my culture," she admitted. "But I learned that when you share something meaningful to you, people respond with kindness and curiosity. We're all different, but that's what makes us stronger together."</p>
+            </div>
+            
+            <div class="thinking-break">
+                <h4>🤔 Stop and Think</h4>
+                <p><strong>Culture Detective Question:</strong> How might this festival experience change the way students interact with each other in the future? What does Dmitri's grandmother's garden metaphor mean?</p>
+            </div>
+            
+            <div class="question-box">
+                <h3>📝 Chapter 4 STAAR Practice Questions</h3>
+                
+                <div class="question-item">
+                    <p><strong>10.</strong> What does Dmitri's grandmother's comparison of America to a garden suggest?</p>
+                    <p>A) America has the best flowers in the world</p>
+                    <p>B) Different types of people can create beauty together without being the same</p>
+                    <p>C) Gardening is an important American tradition</p>
+                    <p>D) America is the most beautiful country</p>
+                </div>
+                
+                <div class="question-item">
+                    <p><strong>11.</strong> How did Elena's feelings change from the beginning to the end of the festival?</p>
+                    <p>A) From excited to disappointed</p>
+                    <p>B) From nervous to confident and happy</p>
+                    <p>C) From confident to uncertain</p>
+                    <p>D) From happy to worried</p>
+                </div>
+                
+                <div class="question-item">
+                    <p><strong>12.</strong> What did Sarah learn from her experience at the festival?</p>
+                    <p>A) Arabic writing is easier than English</p>
+                    <p>B) People from different cultures have similar hopes and dreams</p>
+                    <p>C) Cultural festivals should happen more often</p>
+                    <p>D) Learning foreign languages is important</p>
+                </div>
+                
+                <button class="collapsible">📋 Show Chapter 4 Answers</button>
+                <div class="collapsible-content">
+                    <h4>✅ Chapter 4 Answer Key:</h4>
+                    
+                    <p><strong>10. B - Different types of people can create beauty together without being the same</strong></p>
+                    <p><em>Explanation:</em> Dmitri's grandmother's metaphor suggests that like different flowers in a garden, different people can create something beautiful together without all being the same.</p>
+                    
+                    <p><strong>11. B - From nervous to confident and happy</strong></p>
+                    <p><em>Explanation:</em> Elena started the day feeling nervous and worried, but ended with "tears of happiness" and confidence, learning that sharing her culture brought positive responses.</p>
+                    
+                    <p><strong>12. B - People from different cultures have similar hopes and dreams</strong></p>
+                    <p><em>Explanation:</em> Sarah realized that "even though we come from different places, we all have similar hopes and dreams—to be understood, have friends, and belong."</p>
+                </div>
+            </div>
+            
+            <div class="chapter">
+                <h3>Chapter 5: Lasting Change</h3>
+                
+                <p>The festival officially ended with students exchanging contact information and making plans to learn more about each other's cultures. Some students planned to visit each other's places of worship, others wanted to learn new languages, and many expressed interest in trying authentic versions of the foods they had sampled. The event had succeeded in its goal of bringing people together, but more importantly, it had planted seeds for lasting friendships and ongoing cultural exchange.</p>
+                
+                <p>In the weeks following the festival, the positive changes were evident throughout Roosevelt Middle School. Students began sitting with people from different cultural backgrounds at lunch, the library started a multicultural book club, and several students organized language exchange partnerships. The festival had demonstrated that celebrating differences doesn't divide communities—it strengthens them by creating understanding, respect, and appreciation for the rich tapestry of human experience.</p>
+                
+                <p>As Elena walked home that evening, she carried with her not just the memories of a successful day, but a deeper understanding of what it means to be part of a diverse community. She realized that sharing her heritage hadn't diminished its special meaning to her family—instead, it had allowed others to appreciate its beauty and had connected her to her classmates in ways she never could have imagined. The festival had taught everyone an important lesson: when we celebrate our differences with open hearts and minds, we discover the fundamental similarities that unite us all as human beings.</p>
+            </div>
+            
+            <div class="question-box">
+                <h3>📝 Overall Story STAAR Practice Questions</h3>
+                
+                <div class="question-item">
+                    <p><strong>13.</strong> What evidence shows that the festival had lasting effects beyond that single day?</p>
+                    <p>A) The school received awards for the event</p>
+                    <p>B) Students began sitting together at lunch, started a book club, and organized language exchanges</p>
+                    <p>C) The school decided to have the festival every month</p>
+                    <p>D) Local newspapers wrote articles about the school</p>
+                </div>
+                
+                <div class="question-item">
+                    <p><strong>14.</strong> What is the main theme of this passage?</p>
+                    <p>A) Different cultures should remain separate</p>
+                    <p>B) Cultural festivals are fun school events</p>
+                    <p>C) Celebrating differences strengthens communities through understanding</p>
+                    <p>D) Some cultures are more interesting than others</p>
+                </div>
+                
+                <div class="question-item">
+                    <p><strong>15.</strong> How did sharing her heritage affect Elena's understanding of its meaning?</p>
+                    <p>A) It made her heritage seem less special to her family</p>
+                    <p>B) It didn't change her feelings about her heritage</p>
+                    <p>C) It allowed others to appreciate its beauty and connected her to classmates</p>
+                    <p>D) It made her want to learn about other cultures instead</p>
+                </div>
+                
+                <div class="question-item">
+                    <p><strong>16.</strong> Which detail best supports the idea that the festival promoted unity?</p>
+                    <p>A) Students performed traditional dances from their countries</p>
+                    <p>B) Over twenty different countries were represented</p>
+                    <p>C) Students linked arms in a friendship circle regardless of their cultural backgrounds</p>
+                    <p>D) The gymnasium was decorated with flags</p>
+                </div>
+                
+                <div class="question-item">
+                    <p><strong>17.</strong> What does the author suggest about the relationship between differences and community strength?</p>
+                    <p>A) Differences divide communities and create problems</p>
+                    <p>B) Differences don't matter as long as people are kind</p>
+                    <p>C) Celebrating differences strengthens communities by creating understanding</p>
+                    <p>D) Communities are strongest when everyone is the same</p>
+                </div>
+                
+                <div class="question-item">
+                    <p><strong>18.</strong> What lesson does the festival teach about human connections?</p>
+                    <p>A) People should only connect with others from similar backgrounds</p>
+                    <p>B) Cultural differences make it impossible to truly understand each other</p>
+                    <p>C) When we celebrate differences with open hearts, we discover our fundamental similarities</p>
+                    <p>D) Learning about other cultures is only important for special events</p>
+                </div>
+                
+                <button class="collapsible">📋 Show Overall Story Answers</button>
+                <div class="collapsible-content">
+                    <h4>✅ Overall Story Answer Key:</h4>
+                    
+                    <p><strong>13. B - Students began sitting together at lunch, started a book club, and organized language exchanges</strong></p>
+                    <p><em>Explanation:</em> The passage describes ongoing changes including students sitting with people from different backgrounds at lunch, starting a multicultural book club, and organizing language exchanges.</p>
+                    
+                    <p><strong>14. C - Celebrating differences strengthens communities through understanding</strong></p>
+                    <p><em>Explanation:</em> The main theme is that celebrating cultural differences strengthens communities by creating understanding, respect, and appreciation for human diversity.</p>
+                    
+                    <p><strong>15. C - It allowed others to appreciate its beauty and connected her to classmates</strong></p>
+                    <p><em>Explanation:</em> Elena realized that sharing her heritage didn't diminish its meaning but allowed others to appreciate its beauty and connected her to classmates in new ways.</p>
+                    
+                    <p><strong>16. C - Students linked arms in a friendship circle regardless of their cultural backgrounds</strong></p>
+                    <p><em>Explanation:</em> The friendship circle where students linked arms regardless of cultural backgrounds most clearly demonstrates unity among diverse students.</p>
+                    
+                    <p><strong>17. C - Celebrating differences strengthens communities by creating understanding</strong></p>
+                    <p><em>Explanation:</em> The passage concludes that celebrating differences doesn't divide communities but strengthens them by creating understanding, respect, and appreciation.</p>
+                    
+                    <p><strong>18. C - When we celebrate differences with open hearts, we discover our fundamental similarities</strong></p>
+                    <p><em>Explanation:</em> The passage concludes that when we celebrate differences with open hearts and minds, we discover the fundamental similarities that unite us all as human beings.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <div class="writing-prompt">
+                <h3>✍️ Your Writing Mission</h3>
+                <h4>Persuasive Essay: Cultural Festival Proposal!</h4>
+                <p>Write a persuasive essay (350-450 words) convincing your school principal to organize a cultural festival like the one in today's story. Use evidence from the reading and your own ideas to support your argument.</p>
+                
+                <p><strong>Your essay should include:</strong></p>
+                <ul>
+                    <li><strong>Strong Introduction:</strong> State your position clearly</li>
+                    <li><strong>3 Compelling Reasons:</strong> Provide specific examples and evidence</li>
+                    <li><strong>Evidence from Today's Story:</strong> Use examples from "The Festival of Many Voices"</li>
+                    <li><strong>Vocabulary:</strong> Include at least 4 vocabulary words from today's lesson</li>
+                    <li><strong>Address Concerns:</strong> Consider possible objections and respond to them</li>
+                    <li><strong>Powerful Conclusion:</strong> End with a call for action</li>
+                </ul>
+                <p><strong>Goal:</strong> Write a persuasive essay that would convince any principal to start a cultural festival!</p>
+                
+                <div style="background: rgba(255,255,255,0.3); border-radius: 10px; padding: 15px; margin-top: 15px;">
+                    <h4>Persuasive Writing Tips:</h4>
+                    <ul>
+                        <li>Start with a hook to grab the reader's attention</li>
+                        <li>Use transition words to connect your ideas (furthermore, additionally, in conclusion)</li>
+                        <li>Include specific examples from the story as evidence</li>
+                        <li>Show how a cultural festival would benefit the entire school community</li>
+                        <li>End with a strong call to action that motivates the reader</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <div class="week-completion-celebration">
+                <h2>🏆 CONGRATULATIONS! WEEK 2 COMPLETE! 🏆</h2>
+                
+                <div class="achievement-banner">
+                    <h3>🌟 Amazing Progress This Week!</h3>
+                    <p>You've successfully completed 5 days of advanced reading and are building toward <strong>MASTERS LEVEL</strong> performance!</p>
+                </div>
+                
+                <div class="week-summary">
+                    <h3>📊 Week 2 Achievements</h3>
+                    <div class="achievement-grid">
+                        <div class="achievement-item">
+                            <div class="achievement-icon">📖</div>
+                            <div class="achievement-text">
+                                <strong>7,500+ Words Read</strong>
+                                <p>Space exploration, biographies, ocean discovery, technology innovation, and cultural connections</p>
+                            </div>
+                        </div>
+                        <div class="achievement-item">
+                            <div class="achievement-icon">❓</div>
+                            <div class="achievement-text">
+                                <strong>87+ Questions Mastered</strong>
+                                <p>Comprehensive STAAR-style practice with detailed explanations and feedback</p>
+                            </div>
+                        </div>
+                        <div class="achievement-item">
+                            <div class="achievement-icon">✍️</div>
+                            <div class="achievement-text">
+                                <strong>5 Writing Challenges</strong>
+                                <p>Narrative, descriptive, creative, informational, and persuasive writing practice</p>
+                            </div>
+                        </div>
+                        <div class="achievement-item">
+                            <div class="achievement-icon">🔤</div>
+                            <div class="achievement-text">
+                                <strong>30 New Vocabulary Words</strong>
+                                <p>Advanced academic vocabulary across science, technology, and social studies</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="progress-celebration">
+                    <h3>🎯 Your Amazing Reading Journey</h3>
+                    <div class="lexile-progress">
+                        <p><strong>Week 2 Lexile Range:</strong> 930L → 955L</p>
+                        <p><strong>Achievement Level:</strong> Moving from "Meets Grade Level" to "Masters Grade Level"</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 85%;">85% Progress to Masters Level!</div>
+                        </div>
+                        <p class="progress-note">You're reading at advanced levels and building incredible comprehension skills!</p>
+                    </div>
+                </div>
+
+                <div class="next-steps">
+                    <h3>🚀 What's Next for You?</h3>
+                    <p>You're doing <strong>incredible work</strong>! Your dedication to
