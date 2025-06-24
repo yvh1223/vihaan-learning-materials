@@ -36,8 +36,17 @@
                     <h3>Day 1: Mystery Adventure</h3>
                     <p>"The Time Capsule Discovery"</p>
                     <p class="nav-details">Full story + 13 STAAR questions + Writing prompt</p>
-                    <button class="nav-button" onclick="event.stopPropagation();">Start Day 2</button>
+                    <button class="nav-button" onclick="event.stopPropagation();">Start Day 1</button>
                 </div>
+
+                
+                <div class="nav-card" onclick="window.location.href='day2-complete.html'">
+                    <div class="nav-icon">🌱</div>
+                    <h3>Day 2: Environmental Heroes</h3>
+                    <p>"Young Scientists Saving Our Planet"</p>
+                    <p class="nav-details">Full article + 15 STAAR questions + Proposal writing</p>
+                    <button class="nav-button" onclick="event.stopPropagation();">Start Day 2</button>
+                </div>  
         
                 <div class="nav-card" onclick="window.location.href='day3-complete.html'">
                     <div class="nav-icon">🧊</div>
@@ -248,13 +257,32 @@
             <p>🌟 Ready for immediate use with any web browser</p>
         </div>
     </div>
+
+    <script>
+        function toggleWeek(weekId) {
+            const content = document.getElementById(weekId + '-content');
+            const icon = document.getElementById(weekId + '-icon');
+            
+            if (content.style.display === 'none') {
+                content.style.display = 'block';
+                icon.textContent = '▼';
+                content.style.animation = 'slideDown 0.3s ease-out';
+            } else {
+                content.style.display = 'none';
+                icon.textContent = '▶';
+            }
+        }
+
+        // Initialize all weeks as expanded on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const weekContents = ['week1-content', 'week2-content', 'resources-content'];
+            weekContents.forEach(function(contentId) {
+                const content = document.getElementById(contentId);
+                if (content) {
+                    content.style.display = 'block';
+                }
+            });
+        });
+    </script>
 </body>
-</html>ation();">Start Day 1</button>
-                </div>
-                
-                <div class="nav-card" onclick="window.location.href='day2-complete.html'">
-                    <div class="nav-icon">🌱</div>
-                    <h3>Day 2: Environmental Heroes</h3>
-                    <p>"Young Scientists Saving Our Planet"</p>
-                    <p class="nav-details">Full article + 15 STAAR questions + Proposal writing</p>
-                    <button class="nav-button" onclick="event.stopPropag
+</html>

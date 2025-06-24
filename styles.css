@@ -22,11 +22,12 @@ body {
 
 .header {
     text-align: center;
-    background: rgba(255, 255, 255, 0.95);
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     border-radius: 20px;
     padding: 30px;
     margin-bottom: 30px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(52, 152, 219, 0.1);
 }
 
 .header h1 {
@@ -47,9 +48,10 @@ body {
 .introduction-section {
     margin: 30px 0;
     padding: 30px;
-    background: rgba(255, 255, 255, 0.95);
+    background: linear-gradient(135deg, #e3f2fd 0%, #f1f8e9 100%);
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(33, 150, 243, 0.1);
 }
 
 .introduction-section h2 {
@@ -62,7 +64,7 @@ body {
 }
 
 .intro-card {
-    background: #ffffff;
+    background: linear-gradient(135deg, #fff3e0 0%, #f3e5f5 100%);
     padding: 25px;
     border-radius: 12px;
     margin-top: 15px;
@@ -160,7 +162,7 @@ body {
 }
 
 .nav-card {
-    background: #ffffff;
+    background: linear-gradient(135deg, #fafafa 0%, #f0f4f8 100%);
     border-radius: 12px;
     padding: 25px;
     text-align: left;
@@ -226,11 +228,12 @@ body {
 
 /* Week 2 Section Styles */
 .week-2 {
-    background: rgba(255, 255, 255, 0.95);
+    background: linear-gradient(135deg, #e8eaf6 0%, #f3e5f5 100%);
     border-radius: 15px;
     padding: 30px;
     margin: 30px 0;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(103, 58, 183, 0.1);
 }
 
 .week-2 .week-title {
@@ -254,7 +257,7 @@ body {
 }
 
 .day-card {
-    background: #ffffff;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     border-radius: 12px;
     padding: 25px;
     transition: all 0.3s ease;
@@ -384,11 +387,12 @@ body {
 
 /* Overview Section */
 .overview-section {
-    background: rgba(255, 255, 255, 0.95);
+    background: linear-gradient(135deg, #e1f5fe 0%, #f0f4f8 100%);
     border-radius: 20px;
     padding: 30px;
     margin-bottom: 30px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(3, 169, 244, 0.1);
 }
 
 .overview-section h2 {
@@ -442,7 +446,7 @@ body {
 }
 
 .feature-card {
-    background: #ffffff;
+    background: linear-gradient(135deg, #f1f8e9 0%, #e8f5e8 100%);
     padding: 25px;
     border-radius: 15px;
     border-left: 5px solid #27ae60;
@@ -470,11 +474,12 @@ body {
 
 /* Quick Start */
 .quick-start {
-    background: rgba(255, 255, 255, 0.95);
+    background: linear-gradient(135deg, #fff8e1 0%, #f3e5f5 100%);
     border-radius: 20px;
     padding: 30px;
     margin-bottom: 30px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 193, 7, 0.1);
 }
 
 .quick-start h2 {
@@ -493,7 +498,7 @@ body {
 }
 
 .step-card {
-    background: #ffffff;
+    background: linear-gradient(135deg, #fff3e0 0%, #fafafa 100%);
     padding: 25px;
     border-radius: 15px;
     text-align: center;
@@ -535,11 +540,12 @@ body {
 /* Footer */
 .footer {
     text-align: center;
-    background: rgba(255, 255, 255, 0.95);
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     border-radius: 15px;
     padding: 20px;
     margin-top: 30px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(108, 117, 125, 0.1);
 }
 
 .footer p {
@@ -909,6 +915,19 @@ body {
     to { 
         opacity: 1; 
         transform: translateY(0); 
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        max-height: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        max-height: 1000px;
+        transform: translateY(0);
     }
 }
 
