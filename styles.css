@@ -126,6 +126,10 @@ body {
     border: none;
     cursor: pointer;
     font-size: 0.9em;
+    position: relative;
+    z-index: 10;
+    min-width: 120px;
+    text-align: center;
 }
 
 .day-button:hover, .nav-button:hover {
@@ -133,6 +137,21 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     color: white;
+}
+
+.day-button:active, .nav-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Ensure buttons are clickable and prevent event conflicts */
+.nav-button, .day-button {
+    pointer-events: all;
+}
+
+.nav-card .nav-button, .intro-card .day-button, .day-card .day-button {
+    position: relative;
+    z-index: 20;
 }
 
 /* Week Section Styling */
@@ -345,12 +364,42 @@ body {
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
+/* Universal Card Styling */
+.card, .nav-card, .day-card, .intro-card {
+    background: linear-gradient(135deg, #fafafa 0%, #f0f4f8 100%);
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover, .nav-card:hover, .day-card:hover, .intro-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+    border-color: #3498db;
+}
+
+/* Specific overrides for different card types */
+.intro-card {
+    background: linear-gradient(135deg, #fff3e0 0%, #f3e5f5 100%);
+}
+
+.day-card {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+/* Week Summary */
 .week-summary {
-    background: #f8f9fa;
+    background: linear-gradient(135deg, #f1f8e9 0%, #e8f5e8 100%);
     padding: 25px;
     border-radius: 12px;
     margin-top: 30px;
     border-left: 5px solid #27ae60;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 .week-summary h3 {
@@ -556,20 +605,22 @@ body {
 
 /* Shared Styles for Content Pages */
 .content-header {
-    background: rgba(255, 255, 255, 0.95);
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     border-radius: 20px;
     padding: 25px;
     margin-bottom: 25px;
     text-align: center;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(52, 152, 219, 0.1);
 }
 
 .content-section {
-    background: rgba(255, 255, 255, 0.95);
+    background: linear-gradient(135deg, #f1f8e9 0%, #e8f5e8 100%);
     border-radius: 20px;
     padding: 30px;
     margin-bottom: 30px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(76, 175, 80, 0.1);
 }
 
 .back-button {
@@ -782,11 +833,12 @@ body {
 
 /* Progress Tracking */
 .progress-tracker {
-    background: rgba(255, 255, 255, 0.95);
+    background: linear-gradient(135deg, #e8f5e8 0%, #f1f8e9 100%);
     border-radius: 15px;
     padding: 20px;
     margin: 20px 0;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(76, 175, 80, 0.2);
 }
 
 .progress-stats {
