@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 0 - Welcome to Learning Adventure!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="nav-bar">
+            <a href="index.html" class="nav-link">← Back to Home</a>
+            <div class="nav-title">Day 0 - Introduction Session</div>
+            <div class="nav-progress">30-40 minutes</div>
+        </nav>
+
+        <header class="lesson-header">
+            <h1>🎉 Welcome to Your Learning Adventure!</h1>
+            <div class="lesson-info">
+                <div class="info-card">
+                    <span class="info-label">Today's Goal</span>
+                    <span class="info-value">Get to know each other & have fun!</span>
+                </div>
+                <div class="info-card">
+                    <span class="info-label">Reading Level</span>
+                    <span class="info-value">920L</span>
+                </div>
+                <div class="info-card">
+                    <span class="info-label">Time</span>
+                    <span class="info-value">30-40 minutes</span>
+                </div>
+            </div>
+        </header>
+
+        <section class="welcome-section">
+            <div class="welcome-card">
+                <h2>🌟 Hi Vihaan!</h2>
+                <p>Welcome to your personalized learning adventure! Today is all about getting to know each other and having some fun while we explore an exciting story together.</p>
+                <p><strong>What to expect:</strong></p>
+                <ul>
+                    <li>A fun adventure story about a young explorer</li>
+                    <li>Some interesting questions to discuss</li>
+                    <li>A chance to share your own creative ideas</li>
+                    <li>No pressure - just learning and having fun!</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="vocabulary-preview">
+            <h2>📚 Words to Know</h2>
+            <p>Here are some words from today's story. Don't worry if you don't know them all - we'll discover them together!</p>
+            <div class="vocab-grid">
+                <div class="vocab-card" onclick="toggleDefinition(this)">
+                    <div class="vocab-word">expedition</div>
+                    <div class="vocab-definition">a journey undertaken for a specific purpose, especially exploration</div>
+                </div>
+                <div class="vocab-card" onclick="toggleDefinition(this)">
+                    <div class="vocab-word">treacherous</div>
+                    <div class="vocab-definition">dangerous and unpredictable</div>
+                </div>
+                <div class="vocab-card" onclick="toggleDefinition(this)">
+                    <div class="vocab-word">pristine</div>
+                    <div class="vocab-definition">perfectly clean and untouched</div>
+                </div>
+                <div class="vocab-card" onclick="toggleDefinition(this)">
+                    <div class="vocab-word">phenomenon</div>
+                    <div class="vocab-definition">something remarkable or extraordinary</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="reading-section">
+            <h2>📖 Today's Story: The Young Cartographer</h2>
+            <div class="story-content">
+                <div class="chapter">
+                    <h3>Chapter 1: The Discovery</h3>
+                    <p>Twelve-year-old Maya Chen had always been fascinated by maps. While other kids collected baseball cards or video games, Maya collected vintage atlases and spent her afternoons sketching detailed maps of her neighborhood. Her bedroom walls were covered with hand-drawn charts showing everything from the location of the best climbing trees to secret pathways between houses.</p>
+
+                    <p>One rainy Saturday morning, while exploring her grandmother's attic, Maya discovered something extraordinary. Hidden beneath a pile of old quilts was a leather-bound journal filled with mysterious symbols and what appeared to be an incomplete map. The pages were yellowed with age, and the ink had faded to a deep brown color.</p>
+
+                    <p>"Grandma!" Maya called down the stairs, her voice echoing through the old house. "Come look at this!"</p>
+
+                    <div class="thinking-question">
+                        <strong>🤔 Thinking Time:</strong> What do you think Maya found? Why might it be important?
+                    </div>
+                </div>
+
+                <div class="chapter">
+                    <h3>Chapter 2: The Legend</h3>
+                    <p>Maya's grandmother, Elena, climbed the creaky attic stairs and gasped when she saw the journal in Maya's hands. "I haven't seen that in forty years," she whispered, settling down on an old wooden crate. "That belonged to your great-grandfather, Captain Miguel Chen. He was an explorer and cartographer who traveled to remote islands in the Pacific Ocean."</p>
+
+                    <p>Elena carefully turned the delicate pages, pointing to various symbols and sketches. "This journal contains his notes about a legendary island that was said to contain the most pristine coral reef ever discovered. Captain Miguel believed it held secrets about marine life that could help scientists understand ocean ecosystems better."</p>
+
+                    <p>Maya's eyes widened as she studied the incomplete map. The island was marked with a distinctive star symbol, but the coordinates were written in a code she couldn't decipher. "Did he ever find it?" she asked breathlessly.</p>
+
+                    <p>"No one knows," Elena replied mysteriously. "He disappeared during his final expedition, and this journal was the only thing that was ever recovered."</p>
+
+                    <div class="thinking-question">
+                        <strong>🤔 Thinking Time:</strong> If you were Maya, what would you want to do with this journal?
+                    </div>
+                </div>
+
+                <div class="chapter">
+                    <h3>Chapter 3: The Plan</h3>
+                    <p>For the next several weeks, Maya became completely absorbed in studying her great-grandfather's journal. She spent hours at the local library, researching historical navigation methods and learning about Pacific Ocean geography. She discovered that many of the symbols in the journal were actually traditional navigation markers used by ancient Pacific Island cultures.</p>
+
+                    <p>With the help of her science teacher, Mr. Rodriguez, Maya began to decode the mysterious coordinates. It was like solving the world's most challenging puzzle. Each symbol revealed a piece of the larger picture, and slowly, the location of the legendary island began to take shape.</p>
+
+                    <p>"You know, Maya," Mr. Rodriguez said one afternoon as they worked together, "modern satellite technology might be able to help us verify these coordinates. Would you be interested in presenting your research at the Regional Science Fair?"</p>
+
+                    <p>Maya's heart raced with excitement. This could be her chance to not only honor her great-grandfather's memory but also contribute to marine science research. She imagined herself standing before a panel of judges, explaining how historical cartography could lead to new oceanographic discoveries.</p>
+
+                    <div class="thinking-question">
+                        <strong>🤔 Thinking Time:</strong> What challenges might Maya face in her research project?
+                    </div>
+                </div>
+
+                <div class="chapter">
+                    <h3>Chapter 4: The Breakthrough</h3>
+                    <p>After months of careful research and analysis, Maya made a remarkable breakthrough. By combining her great-grandfather's traditional navigation techniques with modern GPS technology, she was able to pinpoint the exact location described in the journal. The coordinates pointed to a small, previously uncharted island in a remote area of the Pacific Ocean.</p>
+
+                    <p>Even more exciting was what satellite imagery revealed: the island appeared to have an extraordinarily large coral reef system surrounding it, just as Captain Miguel had described. The reef showed unusual color patterns that marine biologists found intriguing, suggesting it might indeed harbor unique marine species.</p>
+
+                    <p>Maya's presentation at the science fair was a tremendous success. Her project, titled "Historical Cartography Meets Modern Conservation," impressed the judges so much that she won first place. More importantly, her research attracted the attention of Dr. Sarah Williams, a marine biologist from the local university.</p>
+
+                    <p>"Maya," Dr. Williams said after the presentation, "your work could lead to the discovery of new marine species. Would you be interested in joining our summer research program? We're planning an expedition to investigate this reef system."</p>
+
+                    <p>As Maya held her great-grandfather's journal close to her chest, she realized that his unfinished journey was about to become her beginning. The young cartographer had not only solved a decades-old mystery but had also opened the door to new scientific discoveries that could benefit the entire world.</p>
+
+                    <div class="thinking-question">
+                        <strong>🤔 Thinking Time:</strong> How did Maya's discovery connect the past with the future?
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="questions-section">
+            <h2>🧠 Let's Talk About the Story</h2>
+            <p>Now let's explore some questions about Maya's adventure. Take your time and think about each one!</p>
+
+            <div class="question-container">
+                <div class="question">
+                    <h3>Question 1</h3>
+                    <p>What was Maya's main hobby, and how did it help her with her discovery?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q1" value="a"> A) Collecting baseball cards, which taught her about organizing collections</label>
+                        <label><input type="radio" name="q1" value="b"> B) Playing video games, which improved her problem-solving skills</label>
+                        <label><input type="radio" name="q1" value="c"> C) Collecting maps and drawing charts, which gave her cartography knowledge</label>
+                        <label><input type="radio" name="q1" value="d"> D) Reading mystery books, which helped her solve puzzles</label>
+                    </div>
+                    <div class="answer-explanation" style="display: none;">
+                        <p><strong>Correct Answer: C</strong></p>
+                        <p>Maya's hobby of collecting vintage atlases and drawing detailed maps gave her the cartography knowledge she needed to understand and decode her great-grandfather's journal.</p>
+                    </div>
+                    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+                </div>
+
+                <div class="question">
+                    <h3>Question 2</h3>
+                    <p>Based on the story, what can you infer about Captain Miguel Chen's character?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q2" value="a"> A) He was careless and unprepared for his expeditions</label>
+                        <label><input type="radio" name="q2" value="b"> B) He was dedicated to scientific discovery and exploration</label>
+                        <label><input type="radio" name="q2" value="c"> C) He was mainly interested in finding treasure</label>
+                        <label><input type="radio" name="q2" value="d"> D) He was afraid of taking risks</label>
+                    </div>
+                    <div class="answer-explanation" style="display: none;">
+                        <p><strong>Correct Answer: B</strong></p>
+                        <p>The story shows that Captain Miguel was interested in marine science and coral reef research, suggesting he was dedicated to scientific discovery rather than treasure hunting.</p>
+                    </div>
+                    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+                </div>
+
+                <div class="question">
+                    <h3>Question 3</h3>
+                    <p>What does the word "pristine" mean in the context of the coral reef?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q3" value="a"> A) Very old and ancient</label>
+                        <label><input type="radio" name="q3" value="b"> B) Perfectly clean and untouched</label>
+                        <label><input type="radio" name="q3" value="c"> C) Colorful and beautiful</label>
+                        <label><input type="radio" name="q3" value="d"> D) Large and impressive</label>
+                    </div>
+                    <div class="answer-explanation" style="display: none;">
+                        <p><strong>Correct Answer: B</strong></p>
+                        <p>"Pristine" means perfectly clean and untouched. In this context, it suggests the coral reef was in perfect, natural condition without human damage.</p>
+                    </div>
+                    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+                </div>
+
+                <div class="question">
+                    <h3>Question 4</h3>
+                    <p>Which sequence of events led to Maya's success at the science fair?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q4" value="a"> A) Found journal → Got help from teacher → Won science fair → Decoded coordinates</label>
+                        <label><input type="radio" name="q4" value="b"> B) Found journal → Researched at library → Decoded coordinates → Won science fair</label>
+                        <label><input type="radio" name="q4" value="c"> C) Won science fair → Found journal → Researched at library → Decoded coordinates</label>
+                        <label><input type="radio" name="q4" value="d"> D) Decoded coordinates → Found journal → Researched at library → Won science fair</label>
+                    </div>
+                    <div class="answer-explanation" style="display: none;">
+                        <p><strong>Correct Answer: B</strong></p>
+                        <p>The correct sequence was: Maya found the journal, researched at the library to understand the symbols, decoded the coordinates with help, and then won the science fair with her project.</p>
+                    </div>
+                    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+                </div>
+
+                <div class="question">
+                    <h3>Question 5</h3>
+                    <p>What is the main theme of this story?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q5" value="a"> A) Family history can inspire future discoveries</label>
+                        <label><input type="radio" name="q5" value="b"> B) Technology is more important than traditional knowledge</label>
+                        <label><input type="radio" name="q5" value="c"> C) It's better to work alone than with others</label>
+                        <label><input type="radio" name="q5" value="d"> D) Old maps are not useful in modern times</label>
+                    </div>
+                    <div class="answer-explanation" style="display: none;">
+                        <p><strong>Correct Answer: A</strong></p>
+                        <p>The story's main theme is how Maya's family history (her great-grandfather's work) inspired her own scientific discoveries and led to new opportunities.</p>
+                    </div>
+                    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+                </div>
+
+                <div class="question">
+                    <h3>Question 6</h3>
+                    <p>How did Maya combine old and new methods in her research?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q6" value="a"> A) She used only traditional navigation methods</label>
+                        <label><input type="radio" name="q6" value="b"> B) She used only modern GPS technology</label>
+                        <label><input type="radio" name="q6" value="c"> C) She combined traditional navigation symbols with modern GPS technology</label>
+                        <label><input type="radio" name="q6" value="d"> D) She ignored the old journal and created her own map</label>
+                    </div>
+                    <div class="answer-explanation" style="display: none;">
+                        <p><strong>Correct Answer: C</strong></p>
+                        <p>Maya successfully combined her great-grandfather's traditional navigation techniques and symbols with modern GPS technology to pinpoint the island's location.</p>
+                    </div>
+                    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+                </div>
+
+                <div class="question">
+                    <h3>Question 7</h3>
+                    <p>Based on the story, what can you predict might happen next in Maya's adventure?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q7" value="a"> A) Maya will give up on cartography and choose a different hobby</label>
+                        <label><input type="radio" name="q7" value="b"> B) Maya will join the research expedition to study the coral reef</label>
+                        <label><input type="radio" name="q7" value="c"> C) Maya will sell her great-grandfather's journal</label>
+                        <label><input type="radio" name="q7" value="d"> D) Maya will keep the discovery secret</label>
+                    </div>
+                    <div class="answer-explanation" style="display: none;">
+                        <p><strong>Correct Answer: B</strong></p>
+                        <p>The story ends with Dr. Williams inviting Maya to join the summer research program and expedition, suggesting Maya will continue her scientific work.</p>
+                    </div>
+                    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+                </div>
+
+                <div class="question">
+                    <h3>Question 8</h3>
+                    <p>What does Maya's story teach us about the value of different types of knowledge?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q8" value="a"> A) Only modern technology matters for solving problems</label>
+                        <label><input type="radio" name="q8" value="b"> B) Old knowledge and traditional methods are useless today</label>
+                        <label><input type="radio" name="q8" value="c"> C) Combining historical knowledge with modern tools can lead to important discoveries</label>
+                        <label><input type="radio" name="q8" value="d"> D) Family history is not important for young people</label>
+                    </div>
+                    <div class="answer-explanation" style="display: none;">
+                        <p><strong>Correct Answer: C</strong></p>
+                        <p>Maya's success came from combining her great-grandfather's historical cartography knowledge with modern technology, showing that both old and new knowledge have value.</p>
+                    </div>
+                    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="writing-section">
+            <h2>✍️ Your Turn to Write!</h2>
+            <div class="writing-prompt">
+                <h3>Creative Writing Prompt</h3>
+                <p>Maya discovered something amazing in her grandmother's attic that led to a great adventure. Think about a time when you discovered something interesting, or imagine finding something mysterious in your own home.</p>
+                
+                <p><strong>Write a paragraph (5-7 sentences) about:</strong></p>
+                <ul>
+                    <li>What you found or might find</li>
+                    <li>Where you found it</li>
+                    <li>How it made you feel</li>
+                    <li>What you would want to do with your discovery</li>
+                </ul>
+
+                <div class="writing-area">
+                    <textarea placeholder="Start writing your discovery story here..." rows="8" style="width: 100%; padding: 10px; border: 2px solid #ddd; border-radius: 5px; font-family: Arial, sans-serif; font-size: 14px;"></textarea>
+                </div>
+
+                <div class="writing-tips">
+                    <h4>💡 Writing Tips:</h4>
+                    <ul>
+                        <li>Use descriptive words to help readers picture your discovery</li>
+                        <li>Include your emotions and reactions</li>
+                        <li>Think about what makes your discovery special or interesting</li>
+                        <li>Don't worry about perfect spelling - focus on sharing your ideas!</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="reflection-section">
+            <h2>🌟 Let's Reflect</h2>
+            <div class="reflection-questions">
+                <h3>Discussion Questions</h3>
+                <p>These are just for thinking and talking about - no right or wrong answers!</p>
+                <ul>
+                    <li>What did you like most about Maya's story?</li>
+                    <li>If you could meet Maya, what questions would you ask her?</li>
+                    <li>What subjects are you most interested in learning about?</li>
+                    <li>Have you ever solved a puzzle or mystery? How did it feel?</li>
+                    <li>What would you like to discover or explore?</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="celebration-section">
+            <h2>🎉 Congratulations!</h2>
+            <div class="celebration-card">
+                <p>You've completed your first learning session! Today you:</p>
+                <ul>
+                    <li>✅ Read an exciting 750-word story</li>
+                    <li>✅ Answered thoughtful questions about the story</li>
+                    <li>✅ Practiced creative writing</li>
+                    <li>✅ Learned new vocabulary words</li>
+                    <li>✅ Shared your ideas and thoughts</li>
+                </ul>
+                <p><strong>You did an amazing job today, Vihaan! We're excited to continue this learning journey with you.</strong></p>
+            </div>
+        </section>
+
+        <footer class="lesson-footer">
+            <div class="footer-nav">
+                <a href="index.html" class="footer-link">← Back to Home</a>
+                <span class="footer-progress">Introduction Complete!</span>
+                <a href="day1-complete.html" class="footer-link">Next: Day 1 →</a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function toggleAnswer(button) {
+            const explanation = button.previousElementSibling;
+            if (explanation.style.display === 'none') {
+                explanation.style.display = 'block';
+                button.textContent = 'Hide Answer';
+                button.style.backgroundColor = '#ff6b6b';
+            } else {
+                explanation.style.display = 'none';
+                button.textContent = 'Show Answer';
+                button.style.backgroundColor = '#4ecdc4';
+            }
+        }
+
+        function toggleDefinition(card) {
+            const definition = card.querySelector('.vocab-definition');
+            definition.style.display = definition.style.display === 'block' ? 'none' : 'block';
+        }
+
+        // Add some encouraging messages
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Welcome to your learning adventure, Vihaan! 🌟');
+        });
+    </script>
+</body>
+</html>
