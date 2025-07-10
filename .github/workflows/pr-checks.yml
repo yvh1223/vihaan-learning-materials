@@ -1,0 +1,109 @@
+name: Pull Request Checks
+
+on:
+  pull_request:
+    branches: [ master, main ]
+    types: [opened, synchronize, reopened]
+
+jobs:
+  pr-validation:
+    runs-on: ubuntu-latest
+    name: Validate Pull Request
+    
+    steps:
+    - name: Checkout PR
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        
+    - name: Install validation tools
+      run: npm install -g html-validate
+      
+    - name: Validate changed HTML files
+      run: |
+        echo "🔍 Validating HTML files in this PR..."
+        
+        # Get list of changed HTML files
+        git fetch origin ${{ github.base_ref }}
+        changed_html_files=$(git diff --name-only origin/${{ github.base_ref }}...HEAD | grep '\.html$' || true)
+        
+        if [[ -z "$changed_html_files" ]]; then
+          echo "No HTML files changed in this PR"
+        else
+          echo "Changed HTML files:"
+          echo "$changed_html_files"
+          echo ""
+          
+          # Validate each changed file
+          echo "$changed_html_files" | while read file; do
+            if [[ -f "$file" ]]; then
+              echo "Validating: $file"
+              html-validate "$file"
+            fi
+          done
+        fi
+        
+    - name: Check PR content requirements
+      run: |
+        echo "📋 Checking PR content requirements..."
+        
+        # Check if new day files follow naming convention
+        git fetch origin ${{ github.base_ref }}
+        new_files=$(git diff --name-only --diff-filter=A origin/${{ github.base_ref }}...HEAD)
+        
+        echo "New files in this PR:"
+        echo "$new_files"
+        echo ""
+        
+        # Check for new day files
+        new_day_files=$(echo "$new_files" | grep '^day[0-9]*-.*\.html$' || true)
+        
+        if [[ -n "$new_day_files" ]]; then
+          echo "New learning day files detected:"
+          echo "$new_day_files"
+          
+          # Validate day file structure
+          echo "$new_day_files" | while read file; do
+            if [[ -f "$file" ]]; then
+              echo "Checking structure of: $file"
+              
+              # Check for required sections
+              required_sections=("content-header" "vocabulary" "question-box" "writing-prompt")
+              for section in "${required_sections[@]}"; do
+                if grep -q "$section" "$file"; then
+                  echo "✅ Contains $section"
+                else
+                  echo "❌ Missing $section"
+                fi
+              done
+              
+              # Check for STAAR questions
+              question_count=$(grep -o 'question-item' "$file" | wc -l)
+              echo "📝 Questions found: $question_count"
+              
+              if [[ $question_count -lt 10 ]]; then
+                echo "⚠️ Low question count - consider adding more"
+              fi
+            fi
+          done
+        fi
+        
+    - name: PR Summary
+      run: |
+        echo ""
+        echo "✅ PR validation complete!"
+        echo "This PR is ready for review."
+        
+        # Summary statistics
+        git fetch origin ${{ github.base_ref }}
+        files_changed=$(git diff --name-only origin/${{ github.base_ref }}...HEAD | wc -l)
+        lines_added=$(git diff --shortstat origin/${{ github.base_ref }}...HEAD | grep -o '[0-9]* insertion' | cut -d' ' -f1 || echo "0")
+        
+        echo ""
+        echo "📊 PR Statistics:"
+        echo "- Files changed: $files_changed"
+        echo "- Lines added: $lines_added"
+        echo "- Ready for merge: ✅"

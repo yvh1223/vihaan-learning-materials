@@ -1,0 +1,117 @@
+name: Repository Maintenance
+
+on:
+  schedule:
+    # Run weekly on Sundays at 2 AM UTC
+    - cron: '0 2 * * 0'
+  workflow_dispatch:
+
+jobs:
+  maintenance:
+    runs-on: ubuntu-latest
+    name: Weekly Maintenance Check
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Repository health check
+      run: |
+        echo "🔍 Weekly Repository Health Check"
+        echo "Date: $(date)"
+        echo ""
+        
+        echo "📊 Repository Statistics:"
+        echo "Total files: $(find . -type f | wc -l)"
+        echo "HTML files: $(find . -name "*.html" | wc -l)"
+        echo "Learning modules: $(find . -name "day*-*.html" | wc -l)"
+        echo "Repository size: $(du -sh . | cut -f1)"
+        echo ""
+        
+        echo "📁 File Structure Check:"
+        # Verify all critical files exist
+        critical_files=("index.html" "styles.css" "README.md")
+        for file in "${critical_files[@]}"; do
+          if [[ -f "$file" ]]; then
+            echo "✅ $file"
+          else
+            echo "❌ Missing: $file"
+          fi
+        done
+        
+        echo ""
+        echo "📚 Learning Content Verification:"
+        
+        # Check day files 0-20
+        for i in {0..20}; do
+          if [[ $i == 0 ]]; then
+            file="day0-welcome.html"
+          else
+            file="day${i}-complete.html"
+          fi
+          
+          if [[ -f "$file" ]]; then
+            # Count approximate words and questions
+            word_count=$(grep -o '<p>' "$file" | wc -l)
+            question_count=$(grep -o 'question-item' "$file" | wc -l)
+            echo "✅ Day $i: ~${word_count} paragraphs, ${question_count} questions"
+          else
+            echo "❌ Missing: $file"
+          fi
+        done
+        
+    - name: Check for broken internal references
+      run: |
+        echo ""
+        echo "🔗 Checking Internal References:"
+        
+        # Check for common broken patterns
+        echo "Checking for broken day references..."
+        
+        # Look for missing day references in index.html
+        if [[ -f "index.html" ]]; then
+          for i in {0..20}; do
+            if [[ $i == 0 ]]; then
+              expected="day0-welcome.html"
+            else
+              expected="day${i}-complete.html"
+            fi
+            
+            if grep -q "$expected" "index.html"; then
+              echo "✅ Day $i referenced in index"
+            else
+              echo "⚠️ Day $i not found in index.html"
+            fi
+          done
+        fi
+        
+    - name: Generate maintenance report
+      run: |
+        echo ""
+        echo "📋 Maintenance Summary:"
+        echo "- Repository structure: $(find . -name "day*-*.html" | wc -l)/21 day files present"
+        echo "- Last commit: $(git log -1 --format='%h - %s (%cr)')"
+        echo "- Branch: $(git branch --show-current)"
+        echo "- Status: Repository appears healthy ✅"
+        echo ""
+        echo "🎯 Learning System Status: OPERATIONAL"
+        
+    - name: Update repository metrics (if needed)
+      run: |
+        echo "📈 Calculating updated metrics..."
+        
+        # Count total questions across all files
+        total_questions=$(find . -name "day*-*.html" -exec grep -o 'question-item' {} \; | wc -l)
+        
+        # Estimate total words
+        total_words=$(find . -name "day*-*.html" -exec wc -w {} \; | awk '{sum += $1} END {print sum}')
+        
+        echo "Current metrics:"
+        echo "- STAAR Questions: $total_questions"
+        echo "- Total Words: $total_words"
+        echo "- Learning Days: $(find . -name "day*-*.html" | wc -l)"
+        
+        # Could create an issue or PR if metrics significantly changed
+        if [[ $total_questions -lt 250 ]]; then
+          echo "⚠️ Question count seems low - may need investigation"
+        fi

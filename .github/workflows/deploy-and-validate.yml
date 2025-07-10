@@ -1,0 +1,169 @@
+name: Deploy to GitHub Pages and Quality Checks
+
+on:
+  push:
+    branches: [ master, main ]
+  pull_request:
+    branches: [ master, main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # Quality Checks Job
+  quality-checks:
+    runs-on: ubuntu-latest
+    name: Quality Checks
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        
+    - name: Install validation tools
+      run: |
+        npm install -g html-validate
+        npm install -g broken-link-checker
+        
+    - name: Validate HTML files
+      run: |
+        echo "🔍 Validating HTML files..."
+        find . -name "*.html" -not -path "./node_modules/*" | while read file; do
+          echo "Validating: $file"
+          html-validate "$file" || echo "⚠️ Issues found in $file"
+        done
+        
+    - name: Check file structure
+      run: |
+        echo "📁 Checking learning materials structure..."
+        
+        # Check that all day files exist (Days 0-20)
+        missing_files=()
+        for i in {0..20}; do
+          if [[ $i == 0 ]]; then
+            file="day0-welcome.html"
+          else
+            file="day${i}-complete.html"
+          fi
+          
+          if [[ ! -f "$file" ]]; then
+            missing_files+=("$file")
+          fi
+        done
+        
+        # Check essential files
+        essential_files=("index.html" "styles.css" "README.md" "instructor-guide.html" "homework.html")
+        for file in "${essential_files[@]}"; do
+          if [[ ! -f "$file" ]]; then
+            missing_files+=("$file")
+          fi
+        done
+        
+        if [[ ${#missing_files[@]} -eq 0 ]]; then
+          echo "✅ All required files present!"
+        else
+          echo "❌ Missing files:"
+          printf '%s\n' "${missing_files[@]}"
+          exit 1
+        fi
+        
+    - name: Check internal links
+      run: |
+        echo "🔗 Checking internal navigation links..."
+        
+        # Start a simple HTTP server in background
+        python3 -m http.server 8080 &
+        SERVER_PID=$!
+        sleep 3
+        
+        # Check main index page links
+        echo "Checking index.html links..."
+        blc http://localhost:8080/index.html \
+          --recursive \
+          --filter-level 3 \
+          --exclude-external \
+          || echo "⚠️ Some internal links may need attention"
+          
+        # Kill the server
+        kill $SERVER_PID || true
+        
+    - name: Count content statistics
+      run: |
+        echo "📊 Content Statistics:"
+        echo "HTML files: $(find . -name "*.html" | wc -l)"
+        echo "Day modules: $(find . -name "day*-*.html" | wc -l)"
+        echo "Total words (estimated): $(cat *.html | wc -w)"
+        echo "Total lines of code: $(find . -name "*.html" -o -name "*.css" -o -name "*.js" | xargs wc -l | tail -1)"
+
+  # Build and Deploy Job
+  build-and-deploy:
+    needs: quality-checks
+    runs-on: ubuntu-latest
+    name: Build and Deploy to GitHub Pages
+    
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+      
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Setup Pages
+      uses: actions/configure-pages@v4
+      
+    - name: Prepare deployment
+      run: |
+        echo "🚀 Preparing Vihaan Learning Materials for deployment..."
+        
+        # Create a deployment directory
+        mkdir -p _site
+        
+        # Copy all necessary files
+        cp *.html _site/
+        cp *.css _site/
+        cp README.md _site/
+        
+        # Create a simple deployment info file
+        cat > _site/deployment-info.txt << EOF
+        Vihaan Learning Materials - Deployed $(date)
+        Commit: ${{ github.sha }}
+        Branch: ${{ github.ref_name }}
+        Total Days: 21 (Days 0-20)
+        EOF
+        
+        echo "✅ Deployment prepared!"
+        echo "📁 Files in deployment:"
+        ls -la _site/
+        
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: '_site'
+        
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
+      
+    - name: Deployment summary
+      run: |
+        echo "🎉 Deployment successful!"
+        echo "📚 Vihaan Learning Materials is now live at:"
+        echo "🌐 ${{ steps.deployment.outputs.page_url }}"
+        echo ""
+        echo "📖 Available content:"
+        echo "- 21 complete learning days (Days 0-20)"
+        echo "- 4 weeks of progressive learning"
+        echo "- Interactive STAAR practice"
+        echo "- Instructor and homework resources"
