@@ -315,6 +315,24 @@ body {
     border-color: #f39c12;
 }
 
+.day-card.masters {
+    border-color: #9b59b6;
+    background: linear-gradient(135deg, #f8f9fa 0%, #f3e5f5 100%);
+}
+
+.day-card.masters::before {
+    background: linear-gradient(90deg, #9b59b6, #8e44ad);
+}
+
+.week-5, .week-6 {
+    background: linear-gradient(135deg, #e8eaf6 0%, #f3e5f5 100%);
+    border: 1px solid rgba(156, 39, 176, 0.1);
+}
+
+.week-6 .week-title {
+    border-bottom: 3px solid #9b59b6;
+}
+
 .day-number {
     background: linear-gradient(135deg, #3498db, #2980b9);
     color: white;
