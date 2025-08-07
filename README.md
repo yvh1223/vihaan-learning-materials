@@ -1,7 +1,7 @@
-# 🌟 Vihaan's Complete Learning System
+# 🌟 5th Grade Reading Excellence System
 
 ## 📋 Overview
-Interactive Reading & Writing Learning Materials designed specifically for Vihaan's academic development based on his Spring 2025 STAAR results. This comprehensive system includes instructor guides, student materials, homework assignments, and assessment tools for Days 1 & 2.
+Interactive Reading & Writing Learning Materials designed for 5th grade academic development and STAAR preparation. This comprehensive system includes instructor guides, student materials, homework assignments, and assessment tools.
 
 ## 🎯 Learning Goals
 - **Reading Enhancement**: Build stamina with full-length passages (1,200+ words)
@@ -10,12 +10,12 @@ Interactive Reading & Writing Learning Materials designed specifically for Vihaa
 - **Critical Thinking**: Develop analysis, inference, and evaluation skills
 - **Engagement**: Colorful, interactive, age-appropriate content
 
-## 📊 Based on Vihaan's STAAR Results
-**Current Performance:**
-- **Reading/Language Arts**: Meets Grade Level (1606 score, 64th percentile) → **Target**: Masters Level
-- **Mathematics**: Masters Grade Level (2038 score, 99th percentile) → **Maintain Excellence**
-- **Current Lexile**: 910L → **Materials at**: 925L-940L for growth
-- **Focus Areas**: Reading comprehension (15/26 points) and writing development
+## 📊 STAAR Reading Preparation
+**Target Performance:**
+- **Reading/Language Arts**: From Meets Grade Level → Masters Level
+- **Lexile Progression**: 920L-1025L materials for growth
+- **Focus Areas**: Reading comprehension, inference skills, and writing development
+- **STAAR Preparation**: Authentic practice questions and test-taking strategies
 
 ## 📁 What's Included
 
@@ -231,7 +231,7 @@ Interactive Reading & Writing Learning Materials designed specifically for Vihaa
 
 ## 📋 File Structure
 ```
-vihaan-learning-materials/
+5th-grade-reading-system/
 ├── index.html (main navigation)
 ├── styles.css (all styling)
 ├── day1-complete.html (mystery story + questions)
@@ -243,12 +243,12 @@ vihaan-learning-materials/
 
 ## 🚀 Ready to Begin!
 
-This complete learning system provides everything needed for successful, engaging academic sessions that will help Vihaan excel. The materials are designed for immediate use and can be adapted based on student progress and needs.
+This complete learning system provides everything needed for successful, engaging academic sessions that will help 5th grade students excel. The materials are designed for immediate use and can be adapted based on student progress and needs.
 
 ### Getting Started
 1. **Open `index.html`** in any web browser
 2. **Navigate through the system** using the colorful menu cards
-3. **Start with Day 1** for the mystery adventure or Day 2 for environmental science
+3. **Start with Day 1** for the mystery adventure or explore advanced days
 4. **Use the Instructor Guide** for detailed teaching support
 5. **Check Homework section** for family activities
 

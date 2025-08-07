@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is an interactive HTML-based learning system designed specifically for Vihaan's academic development. The project creates an engaging educational experience with reading comprehension, STAAR test preparation, and writing development activities.
+This is an interactive HTML-based learning system designed for 5th grade academic development. The project creates an engaging educational experience with reading comprehension, STAAR test preparation, and writing development activities.
 
 ## Architecture
 
